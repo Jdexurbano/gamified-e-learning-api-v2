@@ -6,9 +6,11 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\GameController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\LessonController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\StudentLessonController;
 
 
 // Route::get('/user', function (Request $request) {
@@ -29,4 +31,6 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::apiResource('teachers',TeacherController::class);
     Route::apiResource('admin/students',AdminController::class);
     Route::apiResource('games',GameController::class);
+    Route::apiResource('lessons',LessonController::class);
+    Route::apiResource('student/lessons',StudentLessonController::class);
 });
