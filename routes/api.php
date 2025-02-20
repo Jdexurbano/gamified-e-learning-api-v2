@@ -9,6 +9,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\LessonController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\StudentLessonController;
 
@@ -33,4 +34,5 @@ Route::middleware('auth:sanctum')->group(function (){
     Route::apiResource('games',GameController::class);
     Route::apiResource('lessons',LessonController::class);
     Route::apiResource('student/lessons',StudentLessonController::class);
+    Route::apiResource('activities',ActivityController::class);
 });
